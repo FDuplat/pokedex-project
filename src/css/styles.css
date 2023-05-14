@@ -8,15 +8,13 @@ body {
 
 body.dark-theme {
   background-color: slategray;
+  color: lightgray;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   padding: 15px;
-}
-
-header .title {
 }
 
 header span {
@@ -30,7 +28,6 @@ header span {
 
 .dark-theme header span {
   background-color: darkslategray;
-  color: whitesmoke;
 }
 
 header .logo,
@@ -84,7 +81,6 @@ main {
 
 .dark-theme .card-pokemon {
   background-color: darkslategray;
-  color: whitesmoke;
 }
 
 .dark-theme .card-pokemon:hover {
