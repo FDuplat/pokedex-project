@@ -73,7 +73,7 @@ main {
 
 .card-pokemon {
   background-color: lightblue;
-  width: 220px;
+  width: 200px;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -118,8 +118,8 @@ main .card-pokemon .gif-pokemon {
 }
 
 main .card-pokemon .gif {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 }
 
 main .card-pokemon .types {
@@ -129,7 +129,7 @@ main .card-pokemon .types {
 }
 
 main .card-pokemon .type {
-  width: 90px;
+  width: 70px;
   text-align: center;
 }
 
