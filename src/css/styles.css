@@ -111,6 +111,14 @@ main .card-pokemon .pokeid span {
   font-weight: 600;
 }
 
+main .card-pokemon .mega-icon {
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  margin: -15px;
+  place-self: end;
+}
+
 main .card-pokemon .gif-pokemon {
   display: flex;
   gap: 20px;
