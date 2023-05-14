@@ -111,12 +111,6 @@ main .card-pokemon .pokeid span {
   font-weight: 600;
 }
 
-main .card-pokemon .type {
-  text-transform: uppercase;
-  padding: 5px;
-  font-weight: 600;
-}
-
 main .card-pokemon .gif-pokemon {
   display: flex;
   gap: 20px;
@@ -135,6 +129,9 @@ main .card-pokemon .types {
 }
 
 main .card-pokemon .type {
+  text-transform: uppercase;
+  padding: 5px;
+  font-weight: 600;
   width: 80px;
   text-align: center;
 }
