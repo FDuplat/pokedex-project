@@ -7,11 +7,10 @@ body {
 }
 
 body.dark-theme {
-  background-color: rgb(15, 15, 15);
+  background-color: slategray;
 }
 
 header {
-  background-color: slategray;
   display: flex;
   justify-content: space-between;
   padding: 15px;
