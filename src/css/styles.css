@@ -114,7 +114,7 @@ main .card-pokemon .pokeid span {
 main .card-pokemon .mega-icon {
   width: 25px;
   height: 25px;
-  position: fixed;
+  position: absolute;
   margin: -15px;
   place-self: end;
 }
@@ -243,6 +243,5 @@ main .description {
   max-height: 80px;
   overflow-y: auto;
   font-size: 15px;
-  padding-right: 10px;
   cursor: auto;
 }
