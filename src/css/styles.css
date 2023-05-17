@@ -30,10 +30,6 @@ header .title {
   border-radius: 5px;
 }
 
-header .theme {
-  display: table-row;
-}
-
 .dark-theme header .theme {
   color: rgb(240, 240, 240);
 }
@@ -114,8 +110,8 @@ main .card-pokemon .pokeid span {
 }
 
 main .card-pokemon .mega-icon {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   position: absolute;
   margin: -15px;
   place-self: end;
