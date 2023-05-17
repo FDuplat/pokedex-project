@@ -1,5 +1,6 @@
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px;
   max-width: 1920px;
   margin: 0 auto;
   background-color: rgb(170, 170, 170);
@@ -81,7 +82,6 @@ main {
 
 .card-pokemon:hover {
   background-color: deepskyblue;
-  cursor: pointer;
   transition: 0.2s ease-in-out;
   transform: scale(1.05);
 }
@@ -119,6 +119,10 @@ main .card-pokemon .mega-icon {
   position: absolute;
   margin: -15px;
   place-self: end;
+}
+
+main .card-pokemon .mega-icon:hover {
+  cursor: pointer;
 }
 
 main .card-pokemon .gif-pokemon {
