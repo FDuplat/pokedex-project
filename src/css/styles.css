@@ -12,6 +12,18 @@ body.dark-theme {
   color: rgb(240, 240, 240);
 }
 
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -39,13 +51,6 @@ header .image-theme {
   width: 30px;
 }
 
-header #button-theme,
-#button-form {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
 header .logo:hover,
 header .image-theme:hover {
   transform: scale(1.2);
@@ -56,6 +61,30 @@ main {
   max-width: 1280px;
   margin: 0 auto;
   padding: 25px;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(40, 40, 40);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+
+  margin-top: -20px;
+  right: 105%;
+
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#button-mega .tooltip,
+#button-giga .tooltip {
+  left: 105%;
 }
 
 .list-pokemon {
@@ -164,7 +193,6 @@ main .card-pokemon .form-icon:hover,
 main .card-pokemon .region-icon:hover {
   transition: 0.2s ease-in-out;
   transform: scale(1.1);
-  cursor: pointer;
 }
 
 main .card-pokemon .gif-pokemon {
