@@ -1,0 +1,105 @@
+{
+	// Place your pokemon-list workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Pokemon Card": {
+		"prefix": "!pokecard2",
+		"body": [
+			"<li class=\"card-pokemon\">",
+			"  <div class=\"pokeid\">",
+			"    <span>tname</span>",
+			"    <span>#0000</span>",
+			"  </div>",
+			"  <ul class=\"gif-pokemon\">",
+			"    <img src=\"./src/images/pokemons/tname.gif\" alt=\"tname\" class=\"gif\" />",
+			"    <img",
+			"      src=\"./src/images/pokemons/shiny/tname.gif\"",
+			"      alt=\"tname\"",
+			"      class=\"gif\"",
+			"    />",
+			"  </ul>",
+			"  <ul class=\"types\">",
+			"    <li class=\"type ttype\">ttype</li>",
+			"  </ul>",
+			"  <p class=\"description\">templatedescription</p>",
+			"</li>"
+		],
+		"description": "Pokemon Card template"
+	},
+	"Alolan form": {
+		"scope": "html",
+		"prefix": "!alola",
+		"body": [
+			"<button id='btn-alola'>  <img  id='alola-icon'  src='./src/images/icons/Alola_icon.png'  alt='alola'  class='region-icon'  />  <span class='tooltip'> Alolan Form </span>  </button>  "
+		],
+		"description": "Alolan form template"
+	},
+	"Galarian form": {
+		"scope": "html",
+		"prefix": "!galar",
+		"body": [
+			"<button id='btn-galar'>  <img  id='galar-icon'  src='./src/images/icons/Galar_icon.png'  alt='galar'  class='region-icon'  />  <span class='tooltip'> Galarian Form </span>  </button>  "
+		],
+		"description": "Galarian form template"
+	},
+	"Hisuian form": {
+		"scope": "html",
+		"prefix": "!hisui",
+		"body": [
+			"<button id='btn-hisui'>  <img  id='hisui-icon'  src='./src/images/icons/Hisui_icon.png'  alt='hisui'  class='region-icon'  />  <span class='tooltip'> Hisuian Form </span>  </button>  "
+		],
+		"description": "Hisuian form template"
+	},
+	"Paldean form": {
+		"scope": "html",
+		"prefix": "!paldea",
+		"body": [
+			"<button id='btn-paldea'>  <img  id='paldea-icon'  src='./src/images/icons/Paldea_icon.png'  alt='paldea'  class='region-icon'  />  <span class='tooltip'> Paldean Form </span>  </button>  "
+		],
+		"description": "Paldean form template"
+	},
+	"Mega Evolution": {
+		"scope": "html",
+		"prefix": "!mega",
+		"body": [
+			"<button id='btn-mega'>  <img  id='mega-icon'  src='./src/images/icons/Mega_Evolution_icon.png'  alt='mega'  class='region-icon'  />  <span class='tooltip'> Mega Evolution </span>  </button>  "
+		],
+		"description": "Mega Evolution template"
+	},
+	"Gigantamax": {
+		"scope": "html",
+		"prefix": "!giga",
+		"body": [
+			"<button id='btn-giga'>  <img  id='giga-icon'  src='./src/images/icons/Dynamax_icon.png'  alt='gigantamax'  class='region-icon'  />  <span class='tooltip'> Gigantamax </span>  </button>  "
+		],
+		"description": "Gigantamax template"
+	},
+	"Form template": {
+		"prefix": "!form",
+		"body": [
+			"<button id=\"btn-${1|alola,galar,hisui,paldea|}\">",
+			"  <img",
+			"    id=\"$1-icon\"",
+			"    src=\"./src/images/icons/20200216044712!Black_clover_VIII.png\"",
+			"    alt=\"$1\"",
+			"    class=\"region-icon\"",
+			"  />",
+			"  <span class=\"tooltip\"> ${1} Form</span>",
+			"</button>"
+		],
+		"description": "Form template"
+	}
+}

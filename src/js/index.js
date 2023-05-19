@@ -1,14 +1,18 @@
-const themeButton = document.getElementById('button-theme');
+const themebtn = document.getElementById('btn-theme');
 const body = document.querySelector('body');
-const imageThemeButton = document.querySelector('.image-button');
+const themebtnImage = document.querySelector('.image-btn');
 
-themeButton.addEventListener('click', () => {
+function setThemeMode() {
+  var preferredMode = localStorage.getItem('preferredmode');
+  var preferredPagemode = localStorage.getItem('preferredpagemode');
+}
+themebtn.addEventListener('click', () => {
   const darkThemeOn = body.classList.contains('dark-theme');
   body.classList.toggle('dark-theme');
 
   if (darkThemeOn) {
-    imageThemeButton.setAttribute('src', './src/images/icons/sun.png');
+    themebtnImage.setAttribute('src', './src/images/icons/sun.png');
   } else {
-    imageThemeButton.setAttribute('src', './src/images/icons/moon.png');
+    themebtnImage.setAttribute('src', './src/images/icons/moon.png');
   }
 });

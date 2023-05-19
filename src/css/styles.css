@@ -82,8 +82,8 @@ main {
   transition: opacity 1s;
 }
 
-#button-mega .tooltip,
-#button-giga .tooltip {
+#btn-mega .tooltip,
+#btn-giga .tooltip {
   left: 105%;
 }
 
