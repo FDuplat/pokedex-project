@@ -16,90 +16,78 @@
 	// 	"description": "Log output to console"
 	// }
 	"Pokemon Card": {
-		"prefix": "!pokecard2",
+		"prefix": "!card1",
 		"body": [
 			"<li class=\"card-pokemon\">",
 			"  <div class=\"pokeid\">",
-			"    <span>tname</span>",
-			"    <span>#0000</span>",
+			"    <span>${1}</span>",
+			"    <span>#${2}</span>",
 			"  </div>",
 			"  <ul class=\"gif-pokemon\">",
-			"    <img src=\"./src/images/pokemons/tname.gif\" alt=\"tname\" class=\"gif\" />",
 			"    <img",
-			"      src=\"./src/images/pokemons/shiny/tname.gif\"",
-			"      alt=\"tname\"",
+			"      src=\"./src/images/pokemons/${1}.gif\"",
+			"      alt=\"${1}\"",
+			"      class=\"gif\"",
+			"    />",
+			"    <img",
+			"      src=\"./src/images/pokemons/shiny/${1}.gif\"",
+			"      alt=\"${1}\"",
 			"      class=\"gif\"",
 			"    />",
 			"  </ul>",
 			"  <ul class=\"types\">",
-			"    <li class=\"type ttype\">ttype</li>",
+			"  ${5:!typ}",
+			"  ${6:!typ}",
+			"",
 			"  </ul>",
-			"  <p class=\"description\">templatedescription</p>",
+			"  <p class=\"description\">${7}</p>",
 			"</li>"
 		],
 		"description": "Pokemon Card template"
 	},
-	"Alolan form": {
-		"scope": "html",
-		"prefix": "!alola",
-		"body": [
-			"<button id='btn-alola'>  <img  id='alola-icon'  src='./src/images/icons/Alola_icon.png'  alt='alola'  class='region-icon'  />  <span class='tooltip'> Alolan Form </span>  </button>  "
-		],
-		"description": "Alolan form template"
-	},
-	"Galarian form": {
-		"scope": "html",
-		"prefix": "!galar",
-		"body": [
-			"<button id='btn-galar'>  <img  id='galar-icon'  src='./src/images/icons/Galar_icon.png'  alt='galar'  class='region-icon'  />  <span class='tooltip'> Galarian Form </span>  </button>  "
-		],
-		"description": "Galarian form template"
-	},
-	"Hisuian form": {
-		"scope": "html",
-		"prefix": "!hisui",
-		"body": [
-			"<button id='btn-hisui'>  <img  id='hisui-icon'  src='./src/images/icons/Hisui_icon.png'  alt='hisui'  class='region-icon'  />  <span class='tooltip'> Hisuian Form </span>  </button>  "
-		],
-		"description": "Hisuian form template"
-	},
-	"Paldean form": {
-		"scope": "html",
-		"prefix": "!paldea",
-		"body": [
-			"<button id='btn-paldea'>  <img  id='paldea-icon'  src='./src/images/icons/Paldea_icon.png'  alt='paldea'  class='region-icon'  />  <span class='tooltip'> Paldean Form </span>  </button>  "
-		],
-		"description": "Paldean form template"
-	},
-	"Mega Evolution": {
-		"scope": "html",
-		"prefix": "!mega",
-		"body": [
-			"<button id='btn-mega'>  <img  id='mega-icon'  src='./src/images/icons/Mega_Evolution_icon.png'  alt='mega'  class='region-icon'  />  <span class='tooltip'> Mega Evolution </span>  </button>  "
-		],
-		"description": "Mega Evolution template"
-	},
-	"Gigantamax": {
-		"scope": "html",
-		"prefix": "!giga",
-		"body": [
-			"<button id='btn-giga'>  <img  id='giga-icon'  src='./src/images/icons/Dynamax_icon.png'  alt='gigantamax'  class='region-icon'  />  <span class='tooltip'> Gigantamax </span>  </button>  "
-		],
-		"description": "Gigantamax template"
-	},
-	"Form template": {
-		"prefix": "!form",
+	"Region template": {
+		"prefix": "!region",
 		"body": [
 			"<button id=\"btn-${1|alola,galar,hisui,paldea|}\">",
 			"  <img",
 			"    id=\"$1-icon\"",
-			"    src=\"./src/images/icons/20200216044712!Black_clover_VIII.png\"",
+			"    src=\"./src/images/icons/${1/(.*)/${1:/capitalize}/}_icon.png\"",
 			"    alt=\"$1\"",
 			"    class=\"region-icon\"",
 			"  />",
-			"  <span class=\"tooltip\"> ${1} Form</span>",
+			"  <span class=\"tooltip\">${1/(alola)|(galar)|(hisui)|(paldea)/${1:+Alolan}${2:+Galarian}${3:+Hisuian}${4:+Paldean}/} Form</span>",
 			"</button>"
 		],
 		"description": "Form template"
+	},
+	"Form template": {
+		"prefix": "!form",
+		"body": [
+			"<button id=\"btn-${1|mega,giga|}\">",
+			"  <img",
+			"    id=\"$1-icon\"",
+			"    src=\"./src/images/icons/${1/(mega)|(giga)/${1:+Mega_Evolution}${2:+Dynamax}/}_icon.png\"",
+			"    alt=\"${1/(giga)/${1:+gigantamax}/}\"",
+			"    class=\"form-icon\"",
+			"  />",
+			"  <span class=\"tooltip\">${1/(mega)|(giga)/${1:+Mega Evolution}${2:+Gigantamax}/}</span>",
+			"</button>"
+		],
+		"description": "Form template"
+	},
+	"Type template": {
+		"prefix": "!type",
+		"body": [
+			"    <li class=\"type ${3|normal,fire,water,electric,grass,ice,fighting,poison,ground,flying,psychic,bug,rock,ghost,dragon,dark,steel,fairy|}\">${3}</li>",
+		],
+		"description": "Type template"
+	},
+	"test": {
+		"prefix": "!test",
+		"body": [
+			"  <!-- Pokemon has ${1|t1,t1|} -->",
+			"  ${1/(t1)|(t2)/${1:+1Type}${2:+2Types}/}",
+		],
+		"description": "test"
 	}
 }

@@ -124,6 +124,7 @@ main {
 main .card-pokemon .pokeid {
   display: flex;
   justify-content: space-between;
+  width: 155px;
   border: 2px solid black;
   border-radius: 10px;
 }
@@ -155,8 +156,8 @@ main .card-pokemon .form {
 
 .region-icon,
 .form-icon {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border-radius: 20px;
 }
 
@@ -177,15 +178,19 @@ main .card-pokemon .form {
   background: rgb(227, 144, 145);
 }
 .dark-theme #alola-icon {
+  border: 2px solid rgb(133, 133, 133);
   background: rgb(68, 68, 68);
 }
 .dark-theme #galar-icon {
+  border: 2px solid rgb(112, 36, 103);
   background: rgb(172, 55, 158);
 }
 .dark-theme #hisui-icon {
+  border: 2px solid rgb(94, 74, 106);
   background: rgb(144, 114, 163);
 }
 .dark-theme #paldea-icon {
+  border: 2px solid rgb(138, 55, 55);
   background: rgb(212, 84, 85);
 }
 
