@@ -13,13 +13,14 @@ body.dark-theme {
 }
 
 button {
+  white-space: normal;
   background: none;
   border: none;
   outline: none;
   cursor: pointer;
 }
 
-button:hover .tooltip {
+button:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
@@ -63,27 +64,8 @@ main {
   padding: 25px;
 }
 
-.tooltip {
-  visibility: hidden;
-  width: 120px;
-  background-color: rgb(40, 40, 40);
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-
-  position: absolute;
-  z-index: 1;
-
-  margin-top: -20px;
-  right: 105%;
-
-  opacity: 0;
-  transition: opacity 1s;
-}
-
-#btn-mega .tooltip,
-#btn-giga .tooltip {
+.btn-mega .tooltiptext,
+.btn-giga .tooltiptext {
   left: 105%;
 }
 
@@ -157,11 +139,33 @@ main .card-pokemon .form {
   height: 20px;
   border-radius: 20px;
 }
-
 main .card-pokemon .form-icon:hover,
 main .card-pokemon .region-icon:hover {
   transition: 0.3s ease-in-out;
   transform: scale(1.15);
+}
+
+.tooltiptext {
+  display: inline;
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(40, 40, 40);
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+
+  margin-top: -20px;
+  right: 105%;
+
+  opacity: 0;
+  transition: opacity 1s;
+}
+.tpwrap {
+  width: 100%;
 }
 
 #alola-icon {
