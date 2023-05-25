@@ -20,27 +20,28 @@
 		"body": [
 			"<li class=\"card-pokemon\">",
 			"  <div class=\"pokeid\">",
-			"    <span>${1}</span>",
-			"    <span>#${2}</span>",
+			"    ${1}",
+			"    <span>${2}</span>",
+			"    <span>#${3}</span>",
 			"  </div>",
 			"  <ul class=\"gif-pokemon\">",
 			"    <img",
-			"      src=\"./src/images/pokemons/${1}.gif\"",
-			"      alt=\"${1}\"",
+			"      src=\"./src/images/pokemons/${2}.gif\"",
+			"      alt=\"${2}\"",
 			"      class=\"gif\"",
 			"    />",
 			"    <img",
-			"      src=\"./src/images/pokemons/shiny/${1}.gif\"",
-			"      alt=\"${1}\"",
+			"      src=\"./src/images/pokemons/shiny/${2}.gif\"",
+			"      alt=\"${2}\"",
 			"      class=\"gif\"",
 			"    />",
 			"  </ul>",
 			"  <ul class=\"types\">",
+			"  ${4:!typ}",
 			"  ${5:!typ}",
-			"  ${6:!typ}",
 			"",
 			"  </ul>",
-			"  <p class=\"description\">${7}</p>",
+			"  <p class=\"description\">${6}</p>",
 			"</li>"
 		],
 		"description": "Pokemon Card template"
@@ -48,14 +49,14 @@
 	"Region template": {
 		"prefix": "!region",
 		"body": [
-			"<button id=\"btn-${1|alola,galar,hisui,paldea|}\">",
+			"<button class=\"btn-${1|alola,galar,hisui,paldea|}\">",
 			"  <img",
 			"    id=\"$1-icon\"",
 			"    src=\"./src/images/icons/${1/(.*)/${1:/capitalize}/}_icon.png\"",
 			"    alt=\"$1\"",
-			"    class=\"region-icon\"",
+			"    class=\"form-icon\"",
 			"  />",
-			"  <span class=\"tooltip\">${1/(alola)|(galar)|(hisui)|(paldea)/${1:+Alolan}${2:+Galarian}${3:+Hisuian}${4:+Paldean}/} Form</span>",
+			"  <div class=\"tooltip\">${1/(alola)|(galar)|(hisui)|(paldea)/${1:+Alolan}${2:+Galarian}${3:+Hisuian}${4:+Paldean}/} Form</div>",
 			"</button>"
 		],
 		"description": "Form template"
@@ -63,14 +64,14 @@
 	"Form template": {
 		"prefix": "!form",
 		"body": [
-			"<button id=\"btn-${1|mega,giga|}\">",
+			"<button class=\"btn-${1|mega,giga|}\">",
 			"  <img",
 			"    id=\"$1-icon\"",
 			"    src=\"./src/images/icons/${1/(mega)|(giga)/${1:+Mega_Evolution}${2:+Dynamax}/}_icon.png\"",
 			"    alt=\"${1/(giga)/${1:+gigantamax}/}\"",
 			"    class=\"form-icon\"",
 			"  />",
-			"  <span class=\"tooltip\">${1/(mega)|(giga)/${1:+Mega Evolution}${2:+Gigantamax}/}</span>",
+			"  <div class=\"tooltip\">${1/(mega)|(giga)/${1:+Mega Evolution}${2:+Gigantamax}/}</div>",
 			"</button>"
 		],
 		"description": "Form template"

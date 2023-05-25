@@ -118,8 +118,7 @@ main .card-pokemon .pokeid span {
   border: 2px solid rgb(180, 180, 180);
 }
 
-main .card-pokemon .form,
-main .card-pokemon .region {
+main .card-pokemon .form {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -129,18 +128,16 @@ main .card-pokemon .region {
 main .card-pokemon .region {
   place-self: start;
 }
-main .card-pokemon .form {
+main .card-pokemon .evo {
   place-self: end;
 }
 
-.region-icon,
 .form-icon {
   width: 20px;
   height: 20px;
   border-radius: 20px;
 }
-main .card-pokemon .form-icon:hover,
-main .card-pokemon .region-icon:hover {
+main .card-pokemon .form-icon:hover {
   transition: 0.3s ease-in-out;
   transform: scale(1.15);
 }
