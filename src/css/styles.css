@@ -64,11 +64,6 @@ main {
   padding: 25px;
 }
 
-.btn-mega .tooltiptext,
-.btn-giga .tooltiptext {
-  left: 105%;
-}
-
 .list-pokemon {
   display: flex;
   flex-wrap: wrap;
@@ -107,7 +102,7 @@ main .card-pokemon .pokeid {
   justify-content: space-between;
   border: 2px solid black;
   border-radius: 10px;
-  width: 180px;
+  width: 200px;
 }
 main .card-pokemon .pokeid span {
   padding: 5px;
@@ -120,20 +115,20 @@ main .card-pokemon .pokeid span {
 
 main .card-pokemon .form {
   display: flex;
-  flex-direction: column;
   position: absolute;
-  margin: -14px;
+  margin: -38px -14px;
   gap: 2px;
 }
 main .card-pokemon .region {
   place-self: start;
 }
 main .card-pokemon .evo {
+  flex-direction: row-reverse;
   place-self: end;
 }
 
 .form-icon {
-  width: 20px;
+  width: auto;
   height: 20px;
   border-radius: 20px;
 }
@@ -149,20 +144,17 @@ main .card-pokemon .form-icon:hover {
   background-color: rgb(40, 40, 40);
   color: #ffffff;
   text-align: center;
-  padding: 5px 0;
+  padding: 3px 0;
   border-radius: 6px;
 
   position: absolute;
   z-index: 1;
 
-  margin-top: -20px;
-  right: 105%;
+  margin-top: -25px;
+  margin-left: -70px;
 
   opacity: 0;
   transition: opacity 1s;
-}
-.tpwrap {
-  width: 100%;
 }
 
 #alola-icon {
