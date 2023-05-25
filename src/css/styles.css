@@ -151,10 +151,13 @@ main .card-pokemon .form-icon:hover {
   z-index: 1;
 
   margin-top: -25px;
-  margin-left: -70px;
+  margin-left: -20px;
 
   opacity: 0;
   transition: opacity 1s;
+}
+.evo .tooltiptext {
+  margin-left: -120px;
 }
 
 #alola-icon {
