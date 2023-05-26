@@ -20,7 +20,7 @@
 		"body": [
 			"<li class=\"card-pokemon\">",
 			"  <div class=\"pokeid\">",
-			"    ${1}",
+			"    ${1}", //FIXME
 			"    <span>${2}</span>",
 			"    <span>#${3}</span>",
 			"  </div>",
@@ -37,7 +37,7 @@
 			"    />",
 			"  </ul>",
 			"  <ul class=\"types\">",
-			"  ${4:!typ}",
+			"  ${4:!typ}", //FIXME
 			"  ${5:!typ}",
 			"",
 			"  </ul>",
@@ -45,9 +45,10 @@
 			"</li>"
 		],
 		"description": "Pokemon Card template"
+		// TODO - clean all snippets ASAP, 
 	},
 	"Region template": {
-		"prefix": "!region",
+		"prefix": "!region", //MERGEME
 		"body": [
 			"<button class=\"btn-${1|alola,galar,hisui,paldea|}\">",
 			"  <img",

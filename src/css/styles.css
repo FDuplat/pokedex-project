@@ -20,11 +20,6 @@ button {
   cursor: pointer;
 }
 
-button:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -73,7 +68,8 @@ main {
 
 .card-pokemon {
   background-color: rgb(173, 216, 230);
-  width: 225px;
+  width: 220px;
+  height: 320px;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -103,6 +99,7 @@ main .card-pokemon .pokeid {
   border: 2px solid black;
   border-radius: 10px;
   width: 200px;
+  margin-top: 5px;
 }
 main .card-pokemon .pokeid span {
   padding: 5px;
@@ -116,7 +113,7 @@ main .card-pokemon .pokeid span {
 main .card-pokemon .form {
   display: flex;
   position: absolute;
-  margin: -38px -14px;
+  margin: -15px -14px;
   gap: 2px;
 }
 main .card-pokemon .region {
@@ -129,27 +126,26 @@ main .card-pokemon .evo {
 
 .form-icon {
   width: auto;
-  height: 20px;
+  height: 18px;
   border-radius: 20px;
 }
 main .card-pokemon .form-icon:hover {
   transition: 0.3s ease-in-out;
   transform: scale(1.15);
 }
-
+/* TODO - tooltip over card, icons inside, add arrow to tooltip, lower pokeid */
 .tooltiptext {
   display: inline;
   visibility: hidden;
-  width: 120px;
   background-color: rgb(40, 40, 40);
   color: #ffffff;
   text-align: center;
   padding: 3px 0;
   border-radius: 6px;
-
   position: absolute;
   z-index: 1;
 
+  width: 120px;
   margin-top: -25px;
   margin-left: -20px;
 
@@ -158,6 +154,10 @@ main .card-pokemon .form-icon:hover {
 }
 .evo .tooltiptext {
   margin-left: -120px;
+}
+button:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 #alola-icon {
