@@ -1,11 +1,7 @@
 const themebtn = document.getElementById('btn-theme');
 const body = document.querySelector('body');
-const themebtnImage = document.querySelector('.image-btn');
+const themebtnImage = document.querySelector('.image-theme');
 
-function setThemeMode() {
-  var preferredMode = localStorage.getItem('preferredmode');
-  var preferredPagemode = localStorage.getItem('preferredpagemode');
-}
 themebtn.addEventListener('click', () => {
   const darkThemeOn = body.classList.contains('dark-theme');
   body.classList.toggle('dark-theme');
@@ -16,3 +12,7 @@ themebtn.addEventListener('click', () => {
     themebtnImage.setAttribute('src', './src/images/icons/moon.png');
   }
 });
+function setThemeMode() {
+  var preferredMode = localStorage.getItem('preferredmode');
+  var preferredPagemode = localStorage.getItem('preferredpagemode');
+}

@@ -12,12 +12,14 @@ body.dark-theme {
   color: rgb(240, 240, 240);
 }
 
-button {
-  white-space: normal;
+button,
+a {
   background: none;
   border: none;
   outline: none;
   cursor: pointer;
+  height: fit-content;
+  width: fit-content;
 }
 
 header {
@@ -31,7 +33,7 @@ header .title {
   text-align: center;
   padding: 10px;
   margin-left: 10px;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   background-color: lightblue;
   border: 2px solid black;
@@ -99,7 +101,7 @@ main .card-pokemon .pokeid {
   border: 2px solid black;
   border-radius: 10px;
   width: 200px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 main .card-pokemon .pokeid span {
   padding: 5px;
@@ -113,8 +115,8 @@ main .card-pokemon .pokeid span {
 main .card-pokemon .form {
   display: flex;
   position: absolute;
-  margin: -15px -14px;
-  gap: 2px;
+  margin: -10px -7px;
+  gap: 4px;
 }
 main .card-pokemon .region {
   place-self: start;
@@ -126,7 +128,7 @@ main .card-pokemon .evo {
 
 .form-icon {
   width: auto;
-  height: 18px;
+  height: 17px;
   border-radius: 20px;
 }
 main .card-pokemon .form-icon:hover {
@@ -141,11 +143,12 @@ main .card-pokemon .form-icon:hover {
   color: #ffffff;
   text-align: center;
   padding: 3px 0;
-  border-radius: 6px;
+  border-radius: 10px;
   position: absolute;
   z-index: 1;
 
-  width: 120px;
+  width: 100px;
+  height: 20px;
   margin-top: -25px;
   margin-left: -20px;
 
@@ -153,7 +156,7 @@ main .card-pokemon .form-icon:hover {
   transition: opacity 1s;
 }
 .evo .tooltiptext {
-  margin-left: -120px;
+  margin-left: -100px;
 }
 button:hover .tooltiptext {
   visibility: visible;
@@ -309,4 +312,8 @@ main .description {
   border: 2px solid black;
   border-radius: 10px;
   hyphens: auto;
+}
+
+main .description .dark-theme {
+  border-color: rgb(180, 180, 180);
 }
